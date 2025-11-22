@@ -100,9 +100,9 @@ export default function Index() {
             <a href="#contacts" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
           </nav>
           <div className="flex items-center gap-4">
-            <a href="tel:+73912345678" className="hidden sm:flex items-center gap-2 text-sm font-medium">
+            <a href="tel:+79130378879" className="hidden sm:flex items-center gap-2 text-sm font-medium">
               <Icon name="Phone" size={16} />
-              +7 (391) 234-56-78
+              +7 (913) 037-88-79
             </a>
             <Button size="sm" className="bg-primary hover:bg-primary/90 text-foreground">
               Заказать звонок
@@ -111,7 +111,7 @@ export default function Index() {
         </div>
       </header>
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/20 via-secondary/20 to-white py-20 md:py-32">
+      <section className="relative overflow-hidden py-20 md:py-32" style={{ backgroundColor: '#ee91ab' }}>
         <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
@@ -138,12 +138,12 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#19677f' }}>
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Почему выбирают нас?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Почему выбирают нас?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {advantages.map((advantage, index) => (
-              <Card key={index} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg animate-scale-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <Card key={index} className="border-2 hover:border-white transition-all duration-300 hover:shadow-lg animate-scale-in bg-white/90" style={{ animationDelay: `${index * 100}ms` }}>
                 <CardHeader>
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Icon name={advantage.icon as any} className="text-primary" size={24} />
@@ -159,12 +159,12 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="catalog" className="py-16 md:py-24 bg-secondary/5">
+      <section id="catalog" className="py-16 md:py-24" style={{ backgroundColor: '#ee91ab' }}>
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Наша продукция</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product, index) => (
-              <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: `${index * 100}ms`, background: 'linear-gradient(135deg, #ee91ab 0%, #19677f 100%)' }}>
                 <div className="aspect-square overflow-hidden bg-gray-50">
                   <img 
                     src={product.image} 
@@ -173,18 +173,18 @@ export default function Index() {
                   />
                 </div>
                 <CardHeader>
-                  <div className="text-xs font-medium text-primary mb-1">{product.category}</div>
-                  <CardTitle className="text-xl">{product.name}</CardTitle>
-                  <CardDescription>{product.description}</CardDescription>
+                  <div className="text-xs font-medium text-white mb-1">{product.category}</div>
+                  <CardTitle className="text-xl text-white">{product.name}</CardTitle>
+                  <CardDescription className="text-white/90">{product.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold">{product.price}</span>
+                    <span className="text-2xl font-bold text-white">{product.price}</span>
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button 
                           onClick={() => setSelectedProduct(product)}
-                          className="bg-primary hover:bg-primary/90 text-foreground"
+                          className="bg-white hover:bg-white/90 text-gray-900"
                         >
                           Заказать
                         </Button>
@@ -260,15 +260,15 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="about" className="py-16 md:py-24">
+      <section id="about" className="py-16 md:py-24" style={{ backgroundColor: '#19677f' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">О нас</h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">О нас</h2>
+            <p className="text-lg text-white/90 mb-8">
               <strong>ПринтСОКОЛ</strong> — студия печати в Красноярске, специализирующаяся на сублимационной печати. 
               Мы создаем уникальную продукцию для частных лиц и бизнеса: от единичных подарков до крупных корпоративных тиражей.
             </p>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-white/90">
               Наша технология обеспечивает яркие, стойкие изображения, которые не выцветают и не стираются даже после многократных стирок. 
               Работаем быстро, качественно и с любовью к деталям!
             </p>
@@ -276,7 +276,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="delivery" className="py-16 md:py-24 bg-secondary/5">
+      <section id="delivery" className="py-16 md:py-24" style={{ backgroundColor: '#ee91ab' }}>
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Доставка и оплата</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -338,13 +338,13 @@ export default function Index() {
             <div>
               <h3 className="font-semibold mb-4">Контакты</h3>
               <div className="space-y-2 text-gray-400">
-                <a href="tel:+73912345678" className="flex items-center gap-2 hover:text-white transition-colors">
+                <a href="tel:+79130378879" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Icon name="Phone" size={16} />
-                  +7 (391) 234-56-78
+                  +7 (913) 037-88-79
                 </a>
-                <a href="mailto:info@print-sokol.ru" className="flex items-center gap-2 hover:text-white transition-colors">
+                <a href="mailto:art-angelmira@yandex.ru" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Icon name="Mail" size={16} />
-                  info@print-sokol.ru
+                  art-angelmira@yandex.ru
                 </a>
                 <div className="flex items-center gap-2">
                   <Icon name="MapPin" size={16} />
