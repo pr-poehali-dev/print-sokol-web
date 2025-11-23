@@ -151,6 +151,69 @@ export default function ContentSections() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Наши гарантии</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                  <Icon name="ShieldCheck" className="text-green-600" size={32} />
+                </div>
+                <CardTitle className="text-lg">Гарантия качества</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Заменим бракованный товар или вернем деньги
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Clock" className="text-blue-600" size={32} />
+                </div>
+                <CardTitle className="text-lg">Точно в срок</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Соблюдаем сроки изготовления или делаем скидку
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Award" className="text-purple-600" size={32} />
+                </div>
+                <CardTitle className="text-lg">Профессионализм</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Опыт работы более 5 лет, 10 000+ довольных клиентов
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
+              <CardHeader>
+                <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Headphones" className="text-orange-600" size={32} />
+                </div>
+                <CardTitle className="text-lg">Поддержка 24/7</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Консультации и помощь в любое время
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="py-16 md:py-24" style={{ backgroundColor: '#19677f' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
