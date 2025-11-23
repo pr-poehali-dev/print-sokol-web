@@ -67,10 +67,22 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
 💬 Комментарий: {comment}"""
     
     vk_api_url = 'https://api.vk.com/method/messages.send'
+    
+    # Convert chat_id to proper peer_id format
+    # If it's a number without prefix, assume it's community ID and make it negative
+    try:
+        peer_id = int(vk_chat_id)
+        if peer_id > 0 and peer_id < 2000000000:
+            peer_id = -peer_id  # Community messages use negative IDs
+    except ValueError:
+        peer_id = vk_chat_id
+    
+    print(f"Using peer_id: {peer_id}")
+    
     params = {
         'access_token': vk_token,
         'v': '5.131',
-        'peer_id': vk_chat_id,
+        'peer_id': peer_id,
         'message': message,
         'random_id': 0
     }
