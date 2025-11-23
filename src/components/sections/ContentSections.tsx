@@ -151,7 +151,7 @@ export default function ContentSections() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#D3E4FD' }}>
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Наши гарантии</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -275,7 +275,7 @@ export default function ContentSections() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#D3E4FD' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Часто задаваемые вопросы</h2>
@@ -348,7 +348,7 @@ export default function ContentSections() {
         </div>
       </section>
 
-      <footer id="contacts" className="bg-gray-900 text-white py-12">
+      <footer id="contacts" className="text-gray-900 py-12" style={{ backgroundColor: '#FFDEE2' }}>
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
@@ -356,7 +356,7 @@ export default function ContentSections() {
                 <Icon name="Sparkles" size={24} />
                 <span className="text-xl font-bold">ПринтСОКОЛ</span>
               </div>
-              <p className="text-gray-400">
+              <p className="text-gray-700">
                 Студия печати в Красноярске.<br />
                 Качественная сублимационная печать от 1 штуки.
               </p>
@@ -364,12 +364,12 @@ export default function ContentSections() {
 
             <div>
               <h3 className="font-semibold mb-4">Контакты</h3>
-              <div className="space-y-2 text-gray-400">
-                <a href="tel:+79130378879" className="flex items-center gap-2 hover:text-white transition-colors">
+              <div className="space-y-2 text-gray-700">
+                <a href="tel:+79130378879" className="flex items-center gap-2 hover:text-gray-900 transition-colors">
                   <Icon name="Phone" size={16} />
                   +7 (913) 037-88-79
                 </a>
-                <a href="mailto:art-angelmira@yandex.ru" className="flex items-center gap-2 hover:text-white transition-colors">
+                <a href="mailto:art-angelmira@yandex.ru" className="flex items-center gap-2 hover:text-gray-900 transition-colors">
                   <Icon name="Mail" size={16} />
                   art-angelmira@yandex.ru
                 </a>
@@ -383,23 +383,23 @@ export default function ContentSections() {
             <div>
               <h3 className="font-semibold mb-4">Навигация</h3>
               <div className="space-y-2">
-                <a href="#catalog" className="block text-gray-400 hover:text-white transition-colors">Каталог</a>
-                <a href="#about" className="block text-gray-400 hover:text-white transition-colors">О нас</a>
-                <a href="#delivery" className="block text-gray-400 hover:text-white transition-colors">Доставка и оплата</a>
-                <a href="#contacts" className="block text-gray-400 hover:text-white transition-colors">Контакты</a>
+                <a href="#catalog" className="block text-gray-700 hover:text-gray-900 transition-colors">Каталог</a>
+                <a href="#about" className="block text-gray-700 hover:text-gray-900 transition-colors">О нас</a>
+                <a href="#delivery" className="block text-gray-700 hover:text-gray-900 transition-colors">Доставка и оплата</a>
+                <a href="#contacts" className="block text-gray-700 hover:text-gray-900 transition-colors">Контакты</a>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+          <div className="border-t border-pink-300 mt-8 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-700 text-sm">
               <p>&copy; 2024 ПринтСОКОЛ. Все права защищены.</p>
               <div className="flex gap-6">
-                <a href="#privacy" className="hover:text-white transition-colors">Политика конфиденциальности</a>
-                <a href="#terms" className="hover:text-white transition-colors">Условия использования</a>
+                <a href="#privacy" className="hover:text-gray-900 transition-colors">Политика конфиденциальности</a>
+                <a href="#terms" className="hover:text-gray-900 transition-colors">Условия использования</a>
               </div>
             </div>
-            <div className="mt-4 text-xs text-gray-500 text-center md:text-left">
+            <div className="mt-4 text-xs text-gray-600 text-center md:text-left">
               <p className="mb-2">
                 <Icon name="Lock" size={14} className="inline mr-1" />
                 Мы заботимся о вашей конфиденциальности: все персональные данные защищены и используются только для обработки заказов.
