@@ -192,7 +192,7 @@ export default function ContentSections() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  Опыт работы более 5 лет, 10 000+ довольных клиентов
+                  Опыт работы дизайнером 5 лет
                 </p>
               </CardContent>
             </Card>
