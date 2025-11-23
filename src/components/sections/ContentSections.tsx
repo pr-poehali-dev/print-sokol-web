@@ -129,12 +129,12 @@ export default function ContentSections() {
             </div>
             <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
               <img 
-                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/774749e5-048a-4b33-ac10-1cea26b528e9.jpg"
-                alt="Кружки с надписью СОКОЛ"
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/030c2aa5-020e-4679-9aec-3d2c037b97fc.jpg"
+                alt="Кружки с рисунком сокол"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white font-semibold">Кружки с надписью СОКОЛ</p>
+                <p className="text-white font-semibold">Кружки с рисунком сокол</p>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
