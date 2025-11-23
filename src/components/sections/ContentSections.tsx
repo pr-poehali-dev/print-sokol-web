@@ -202,8 +202,8 @@ export default function ContentSections() {
                   <h4 className="font-semibold mb-2">Способы оплаты</h4>
                   <ul className="text-muted-foreground space-y-1">
                     <li>• Наличными при получении</li>
-                    <li>• Картой онлайн (Сбербанк, ЮКасса)</li>
-                    <li>• Безналичный расчет для юр. лиц</li>
+                    <li>• Картой онлайн (Сбербанк)</li>
+                    <li></li>
                   </ul>
                 </div>
               </CardContent>
