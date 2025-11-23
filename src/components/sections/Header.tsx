@@ -29,7 +29,7 @@ export default function Header({
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Icon name="Sparkles" className="text-primary" size={28} />
+          <Icon name="Sparkles" style={{ color: '#fc649c' }} size={28} />
           <span className="text-2xl font-bold">ПринтСОКОЛ</span>
         </div>
         <nav className="hidden md:flex gap-6">

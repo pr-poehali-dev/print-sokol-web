@@ -93,8 +93,8 @@ export default function ProductCatalog({
             {advantages.map((advantage, index) => (
               <Card key={index} className="border-2 hover:border-white transition-all duration-300 hover:shadow-lg animate-scale-in bg-white/90" style={{ animationDelay: `${index * 100}ms` }}>
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon name={advantage.icon as any} className="text-primary" size={24} />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#ffe5f0' }}>
+                    <Icon name={advantage.icon as any} style={{ color: '#fc649c' }} size={24} />
                   </div>
                   <CardTitle className="text-xl">{advantage.title}</CardTitle>
                 </CardHeader>

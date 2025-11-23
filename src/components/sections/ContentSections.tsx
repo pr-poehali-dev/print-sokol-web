@@ -12,8 +12,8 @@ export default function ContentSections() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon name="User" className="text-primary" size={24} />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#ffe5f0' }}>
+                    <Icon name="User" style={{ color: '#fc649c' }} size={24} />
                   </div>
                   <div>
                     <CardTitle className="text-lg">Елена Смирнова</CardTitle>
@@ -34,8 +34,8 @@ export default function ContentSections() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon name="User" className="text-primary" size={24} />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#ffe5f0' }}>
+                    <Icon name="User" style={{ color: '#fc649c' }} size={24} />
                   </div>
                   <div>
                     <CardTitle className="text-lg">Дмитрий Козлов</CardTitle>
@@ -56,8 +56,8 @@ export default function ContentSections() {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon name="User" className="text-primary" size={24} />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#ffe5f0' }}>
+                    <Icon name="User" style={{ color: '#fc649c' }} size={24} />
                   </div>
                   <div>
                     <CardTitle className="text-lg">Анна Петрова</CardTitle>
@@ -157,8 +157,8 @@ export default function ContentSections() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
               <CardHeader>
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-                  <Icon name="ShieldCheck" className="text-green-600" size={32} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#ffe5f0' }}>
+                  <Icon name="ShieldCheck" style={{ color: '#fc649c' }} size={32} />
                 </div>
                 <CardTitle className="text-lg">Гарантия качества</CardTitle>
               </CardHeader>
@@ -171,8 +171,8 @@ export default function ContentSections() {
 
             <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
               <CardHeader>
-                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Clock" className="text-blue-600" size={32} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#ffe5f0' }}>
+                  <Icon name="Clock" style={{ color: '#fc649c' }} size={32} />
                 </div>
                 <CardTitle className="text-lg">Точно в срок</CardTitle>
               </CardHeader>
@@ -185,8 +185,8 @@ export default function ContentSections() {
 
             <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
               <CardHeader>
-                <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Award" className="text-purple-600" size={32} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#ffe5f0' }}>
+                  <Icon name="Award" style={{ color: '#fc649c' }} size={32} />
                 </div>
                 <CardTitle className="text-lg">Профессионализм</CardTitle>
               </CardHeader>
@@ -199,8 +199,8 @@ export default function ContentSections() {
 
             <Card className="text-center hover:shadow-xl transition-all duration-300 border-2 hover:border-primary">
               <CardHeader>
-                <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Headphones" className="text-orange-600" size={32} />
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#ffe5f0' }}>
+                  <Icon name="Headphones" style={{ color: '#fc649c' }} size={32} />
                 </div>
                 <CardTitle className="text-lg">Поддержка 24/7</CardTitle>
               </CardHeader>
@@ -237,7 +237,7 @@ export default function ContentSections() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Icon name="Truck" className="text-primary" />
+                  <Icon name="Truck" style={{ color: '#fc649c' }} />
                   Доставка
                 </CardTitle>
               </CardHeader>
@@ -256,7 +256,7 @@ export default function ContentSections() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Icon name="CreditCard" className="text-primary" />
+                  <Icon name="CreditCard" style={{ color: '#fc649c' }} />
                   Оплата
                 </CardTitle>
               </CardHeader>
@@ -353,7 +353,7 @@ export default function ContentSections() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Icon name="Sparkles" size={24} />
+                <Icon name="Sparkles" style={{ color: '#fc649c' }} size={24} />
                 <span className="text-xl font-bold">ПринтСОКОЛ</span>
               </div>
               <p className="text-gray-700">
