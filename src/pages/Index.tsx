@@ -547,6 +547,79 @@ export default function Index() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#ee91ab' }}>
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши работы</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Примеры наших проектов — от единичных подарков до корпоративных тиражей
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
+              <img 
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/72d1adcf-e042-47f4-abee-0265d6ccbd0b.jpg"
+                alt="Кружка с логотипом"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-white font-semibold">Кружка с логотипом</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
+              <img 
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/05ed4e77-f5e3-4d90-813b-a489cba133d7.jpg"
+                alt="Футболка с принтом"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-white font-semibold">Футболка с принтом</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
+              <img 
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/f4730f22-ce74-4e78-9c31-4906e55ace24.jpg"
+                alt="Термос с брендингом"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-white font-semibold">Термос с брендингом</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
+              <img 
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/fc01df44-7744-40fd-8d18-f89481b8d89f.jpg"
+                alt="Тарелка с фото"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-white font-semibold">Тарелка с фото</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
+              <img 
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/b4bae50d-d26b-4d79-ad56-aba2b7ac3ce4.jpg"
+                alt="Набор кружек"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-white font-semibold">Набор кружек</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
+              <img 
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/e7cb2f93-0f27-4e51-be97-2be81a590211.jpg"
+                alt="Премиум футболка"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-white font-semibold">Премиум футболка</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="py-16 md:py-24" style={{ backgroundColor: '#19677f' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
