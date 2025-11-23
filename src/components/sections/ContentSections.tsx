@@ -89,12 +89,12 @@ export default function ContentSections() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
               <img 
-                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/72d1adcf-e042-47f4-abee-0265d6ccbd0b.jpg"
-                alt="Кружка с логотипом"
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/8bbe4bda-78b6-4db9-95ec-71bb52dead66.jpg"
+                alt="Кружка с рисунком щенка"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white font-semibold">Кружка с логотипом</p>
+                <p className="text-white font-semibold">Кружка с рисунком щенка</p>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
@@ -119,22 +119,22 @@ export default function ContentSections() {
             </div>
             <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
               <img 
-                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/fc01df44-7744-40fd-8d18-f89481b8d89f.jpg"
-                alt="Тарелка с фото"
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/83a3da94-3b31-45ca-8627-2d56d559c748.jpg"
+                alt="Тарелка с рисунком Москвы"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white font-semibold">Тарелка с фото</p>
+                <p className="text-white font-semibold">Тарелка с рисунком Москвы</p>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
               <img 
-                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/b4bae50d-d26b-4d79-ad56-aba2b7ac3ce4.jpg"
-                alt="Набор кружек"
+                src="https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/774749e5-048a-4b33-ac10-1cea26b528e9.jpg"
+                alt="Кружки с надписью СОКОЛ"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white font-semibold">Набор кружек</p>
+                <p className="text-white font-semibold">Кружки с надписью СОКОЛ</p>
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer">
