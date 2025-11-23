@@ -185,7 +185,7 @@ export default function ContentSections() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">По России</h4>
-                  <p className="text-muted-foreground">СДЭК, Boxberry, Почта России<br />Стоимость рассчитывается индивидуально</p>
+                  <p className="text-muted-foreground">Доставка OZON<br />Стоимость рассчитывается индивидуально</p>
                 </div>
               </CardContent>
             </Card>
