@@ -61,46 +61,27 @@ export default function Index() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    try {
-      const response = await fetch('https://functions.poehali.dev/e9be1b07-1285-4ca7-a874-827f859f64cd', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          comment: formData.comment,
-          product: selectedProduct?.name || 'Не указан'
-        })
-      });
+    const message = `🎨 Новая заявка с сайта ПринтСОКОЛ
 
-      const data = await response.json();
+👤 Имя: ${formData.name}
+📱 Телефон: ${formData.phone}
+📧 Email: ${formData.email}
+🛍️ Товар: ${selectedProduct?.name || 'Не указан'}
+💬 Комментарий: ${formData.comment}`;
 
-      if (response.ok && data.success) {
-        toast({
-          title: "Заявка отправлена!",
-          description: "Мы свяжемся с вами в ближайшее время",
-        });
-        setFormData({ name: '', phone: '', email: '', comment: '' });
-        setSelectedProduct(null);
-        setIsQuickOrderOpen(false);
-        setIsProductOrderOpen(false);
-      } else {
-        toast({
-          title: "Ошибка отправки",
-          description: "Попробуйте позвонить нам по телефону",
-          variant: "destructive"
-        });
-      }
-    } catch (error) {
-      toast({
-        title: "Ошибка отправки",
-        description: "Попробуйте позвонить нам по телефону",
-        variant: "destructive"
-      });
-    }
+    const whatsappUrl = `https://chat.whatsapp.com/FM1ES0iORU82XCDcwnc2Tc?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    toast({
+      title: "Открываем WhatsApp",
+      description: "Отправьте сообщение для завершения заявки",
+    });
+    
+    setFormData({ name: '', phone: '', email: '', comment: '' });
+    setSelectedProduct(null);
+    setIsQuickOrderOpen(false);
+    setIsProductOrderOpen(false);
   };
 
   return (
