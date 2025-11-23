@@ -29,7 +29,7 @@ const products = [
     id: 3,
     name: 'Термосы с логотипом',
     description: 'Брендированные термосы для сотрудников, подарки партнерам',
-    price: 'от 1200 ₽',
+    price: 'от 550 ₽',
     image: 'https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/14feb22f-5e5d-4b0e-96cb-afe7add706c1.jpg',
     category: 'Термосы'
   },
