@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
@@ -38,10 +39,66 @@ export default function HeroSection({
   setFormData,
   handleSubmit
 }: HeroSectionProps) {
+  const [timeLeft, setTimeLeft] = useState({
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const targetDate = new Date();
+    targetDate.setHours(23, 59, 59, 999);
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = targetDate.getTime() - now;
+
+      if (distance > 0) {
+        setTimeLeft({
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      } else {
+        targetDate.setDate(targetDate.getDate() + 1);
+        targetDate.setHours(23, 59, 59, 999);
+      }
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative overflow-hidden py-20 md:py-32" style={{ backgroundColor: '#ee91ab' }}>
       <div className="container relative z-10">
         <div className="mx-auto max-w-3xl text-center animate-fade-in">
+          <div className="inline-block bg-red-500 text-white px-6 py-3 rounded-full mb-6 animate-pulse">
+            <div className="flex items-center gap-3">
+              <Icon name="Zap" size={20} />
+              <span className="font-bold text-lg">АКЦИЯ! Скидка 20% на первый заказ</span>
+              <Icon name="Zap" size={20} />
+            </div>
+          </div>
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 mb-6 shadow-xl">
+            <p className="text-sm font-semibold text-gray-700 mb-3">⏰ До конца акции осталось:</p>
+            <div className="flex justify-center gap-4">
+              <div className="bg-gradient-to-br from-red-500 to-pink-500 text-white rounded-lg p-4 min-w-[80px]">
+                <div className="text-3xl md:text-4xl font-bold">{String(timeLeft.hours).padStart(2, '0')}</div>
+                <div className="text-xs md:text-sm uppercase tracking-wider mt-1">часов</div>
+              </div>
+              <div className="bg-gradient-to-br from-red-500 to-pink-500 text-white rounded-lg p-4 min-w-[80px]">
+                <div className="text-3xl md:text-4xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</div>
+                <div className="text-xs md:text-sm uppercase tracking-wider mt-1">минут</div>
+              </div>
+              <div className="bg-gradient-to-br from-red-500 to-pink-500 text-white rounded-lg p-4 min-w-[80px]">
+                <div className="text-3xl md:text-4xl font-bold">{String(timeLeft.seconds).padStart(2, '0')}</div>
+                <div className="text-xs md:text-sm uppercase tracking-wider mt-1">секунд</div>
+              </div>
+            </div>
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
             Печать на кружках, футболках, термосах в Красноярске
           </h1>
