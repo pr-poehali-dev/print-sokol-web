@@ -474,6 +474,79 @@ export default function Index() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Отзывы наших клиентов</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon name="User" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Елена Смирнова</CardTitle>
+                    <div className="flex gap-1 text-yellow-500">
+                      {'★★★★★'.split('').map((star, i) => <span key={i}>{star}</span>)}
+                    </div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Заказывала кружки с фото для подарков на Новый год. Качество печати отличное, цвета яркие! 
+                  Сделали быстро, всего за 2 дня. Всем довольна, рекомендую!
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon name="User" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Дмитрий Козлов</CardTitle>
+                    <div className="flex gap-1 text-yellow-500">
+                      {'★★★★★'.split('').map((star, i) => <span key={i}>{star}</span>)}
+                    </div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Печатали корпоративные футболки для команды - 50 штук. Цены адекватные, качество супер. 
+                  После стирок принт не потускнел. Спасибо за профессионализм!
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon name="User" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Анна Петрова</CardTitle>
+                    <div className="flex gap-1 text-yellow-500">
+                      {'★★★★★'.split('').map((star, i) => <span key={i}>{star}</span>)}
+                    </div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Заказала тарелку с портретом кота - получилось просто волшебно! Очень довольна результатом. 
+                  Ребята помогли с макетом, всё объяснили. Буду заказывать ещё!
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="py-16 md:py-24" style={{ backgroundColor: '#19677f' }}>
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
