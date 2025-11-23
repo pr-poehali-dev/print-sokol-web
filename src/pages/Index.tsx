@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
 
@@ -677,6 +678,79 @@ export default function Index() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Часто задаваемые вопросы</h2>
+            <p className="text-center text-muted-foreground mb-12">
+              Ответы на популярные вопросы о наших услугах
+            </p>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="bg-white rounded-lg px-6 border">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                  Сколько времени занимает изготовление?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Стандартный срок изготовления — от 1 до 3 рабочих дней в зависимости от сложности и тиража. 
+                  Срочные заказы обсуждаются индивидуально. Для крупных корпоративных заказов срок может быть увеличен до 5-7 дней.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="bg-white rounded-lg px-6 border">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                  Какой минимальный тираж для заказа?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  У нас нет минимального тиража — мы работаем от 1 штуки! Это идеально для персональных подарков. 
+                  Для корпоративных заказов от 10 штук действуют скидки.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="bg-white rounded-lg px-6 border">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                  Стирается ли печать после стирки?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Нет! Мы используем технологию сублимационной печати, при которой краска проникает в структуру материала. 
+                  Изображение не выцветает, не трескается и не стирается даже после многократных стирок при температуре до 40°C.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="bg-white rounded-lg px-6 border">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                  Нужен ли готовый дизайн для заказа?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Не обязательно! Если у вас есть готовый макет — отлично. Если нет — мы поможем с разработкой дизайна. 
+                  Можете прислать фото, логотип или просто описать идею, и мы подготовим макет для утверждения.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="bg-white rounded-lg px-6 border">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                  Какие форматы файлов вы принимаете?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Мы работаем с любыми форматами: PNG, JPG, PDF, AI, PSD, CDR. 
+                  Для лучшего качества рекомендуем векторные форматы (AI, PDF) или растровые изображения высокого разрешения (от 300 DPI).
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="bg-white rounded-lg px-6 border">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                  Есть ли гарантия на продукцию?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Да! Мы гарантируем качество печати и даем гарантию на брак производства. 
+                  Если обнаружится производственный дефект, мы бесплатно изготовим замену. 
+                  Перед отправкой все заказы проходят контроль качества.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
