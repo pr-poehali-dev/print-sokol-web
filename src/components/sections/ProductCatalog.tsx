@@ -35,7 +35,7 @@ const products = [
     id: 4,
     name: 'Тарелки с печатью',
     description: 'Декоративные тарелки с фото, подарочные тарелки на заказ',
-    price: 'от 650 ₽',
+    price: 'от 550 ₽',
     image: 'https://cdn.poehali.dev/projects/50f1d508-71f3-40aa-893a-67d9d4c34c45/files/c6a0037a-5093-4fa8-9e0e-06d03a1ee3e7.jpg',
     category: 'Тарелки'
   }
