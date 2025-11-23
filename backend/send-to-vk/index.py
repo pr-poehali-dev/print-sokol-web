@@ -36,8 +36,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         }
     
     vk_token = os.environ.get('VK_BOT_TOKEN')
-    # Temporarily hardcode the correct ID
-    vk_chat_id = '233780534'
+    vk_chat_id = os.environ.get('VK_CHAT_ID', '2000000282')
     
     print(f"VK_BOT_TOKEN present: {bool(vk_token)}")
     print(f"VK_CHAT_ID used: {vk_chat_id}")
