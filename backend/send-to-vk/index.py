@@ -6,7 +6,7 @@ from typing import Dict, Any
 
 def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     '''
-    Business: Send order request to VK chat
+    Business: Send order request to VK chat (updated)
     Args: event with httpMethod, body containing order details
           context with request_id
     Returns: HTTP response with success/error status
@@ -36,10 +36,11 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         }
     
     vk_token = os.environ.get('VK_BOT_TOKEN')
-    vk_chat_id = os.environ.get('VK_CHAT_ID')
+    # Temporarily hardcode the correct ID
+    vk_chat_id = '233780534'
     
     print(f"VK_BOT_TOKEN present: {bool(vk_token)}")
-    print(f"VK_CHAT_ID present: {bool(vk_chat_id)}")
+    print(f"VK_CHAT_ID used: {vk_chat_id}")
     
     if not vk_token or not vk_chat_id:
         return {
@@ -69,11 +70,23 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     vk_api_url = 'https://api.vk.com/method/messages.send'
     
     # Convert chat_id to proper peer_id format
-    # If it's a number without prefix, assume it's community ID and make it negative
+    print(f"Original VK_CHAT_ID from env: {vk_chat_id}")
+    
     try:
-        peer_id = int(vk_chat_id)
-        if peer_id > 0 and peer_id < 2000000000:
-            peer_id = -peer_id  # Community messages use negative IDs
+        peer_id_int = int(vk_chat_id)
+        # If it's a positive number less than 2 billion, it could be:
+        # 1. Community ID (need to make negative)
+        # 2. User ID (use as is)
+        # 3. Chat ID from conversation (already in 2000000000+ format)
+        if peer_id_int > 2000000000:
+            # Already a chat peer_id
+            peer_id = peer_id_int
+        elif peer_id_int > 0:
+            # Could be community ID - try negative first
+            peer_id = -peer_id_int
+        else:
+            # Already negative (community)
+            peer_id = peer_id_int
     except ValueError:
         peer_id = vk_chat_id
     
