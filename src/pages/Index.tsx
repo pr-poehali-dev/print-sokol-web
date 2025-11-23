@@ -69,6 +69,7 @@ const advantages = [
 export default function Index() {
   const { toast } = useToast();
   const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
+  const [isQuickOrderOpen, setIsQuickOrderOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -137,9 +138,57 @@ export default function Index() {
               <Icon name="Phone" size={16} />
               +7 (913) 037-88-79
             </a>
-            <Button size="sm" className="bg-primary hover:bg-primary/90 text-foreground">
-              Заказать звонок
-            </Button>
+            <Dialog open={isQuickOrderOpen} onOpenChange={setIsQuickOrderOpen}>
+              <DialogTrigger asChild>
+                <Button size="sm" className="bg-primary hover:bg-primary/90 text-foreground">
+                  Заказать звонок
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Заказать обратный звонок</DialogTitle>
+                  <DialogDescription>
+                    Оставьте свой номер телефона, и мы перезвоним вам в ближайшее время
+                  </DialogDescription>
+                </DialogHeader>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="quick-name">Ваше имя</Label>
+                    <Input
+                      id="quick-name"
+                      placeholder="Иван Иванов"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="quick-phone">Телефон</Label>
+                    <Input
+                      id="quick-phone"
+                      type="tel"
+                      placeholder="+7 (___) ___-__-__"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="quick-comment">Комментарий (необязательно)</Label>
+                    <Textarea
+                      id="quick-comment"
+                      placeholder="Что бы вы хотели заказать?"
+                      value={formData.comment}
+                      onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
+                      rows={3}
+                    />
+                  </div>
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-foreground">
+                    Отправить заявку
+                  </Button>
+                </form>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </header>
