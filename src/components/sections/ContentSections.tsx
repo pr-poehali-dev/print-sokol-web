@@ -391,8 +391,23 @@ export default function ContentSections() {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 ПринтСОКОЛ. Все права защищены.</p>
+          <div className="border-t border-gray-800 mt-8 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+              <p>&copy; 2024 ПринтСОКОЛ. Все права защищены.</p>
+              <div className="flex gap-6">
+                <a href="#privacy" className="hover:text-white transition-colors">Политика конфиденциальности</a>
+                <a href="#terms" className="hover:text-white transition-colors">Условия использования</a>
+              </div>
+            </div>
+            <div className="mt-4 text-xs text-gray-500 text-center md:text-left">
+              <p className="mb-2">
+                <Icon name="Lock" size={14} className="inline mr-1" />
+                Мы заботимся о вашей конфиденциальности: все персональные данные защищены и используются только для обработки заказов.
+              </p>
+              <p>
+                Оставляя заявку, вы соглашаетесь на обработку персональных данных в соответствии с ФЗ-152 "О персональных данных".
+              </p>
+            </div>
           </div>
         </div>
       </footer>
