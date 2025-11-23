@@ -45,6 +45,7 @@ export default function Index() {
   const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
   const [isQuickOrderOpen, setIsQuickOrderOpen] = useState(false);
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+  const [isProductOrderOpen, setIsProductOrderOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -83,6 +84,9 @@ export default function Index() {
           description: "Мы свяжемся с вами в ближайшее время",
         });
         setFormData({ name: '', phone: '', email: '', comment: '' });
+        setSelectedProduct(null);
+        setIsQuickOrderOpen(false);
+        setIsProductOrderOpen(false);
       } else {
         toast({
           title: "Ошибка отправки",
@@ -124,6 +128,8 @@ export default function Index() {
       <ProductCatalog
         selectedProduct={selectedProduct}
         setSelectedProduct={setSelectedProduct}
+        isProductOrderOpen={isProductOrderOpen}
+        setIsProductOrderOpen={setIsProductOrderOpen}
         formData={formData}
         setFormData={setFormData}
         handleSubmit={handleSubmit}

@@ -67,6 +67,8 @@ const advantages = [
 interface ProductCatalogProps {
   selectedProduct: typeof products[0] | null;
   setSelectedProduct: (product: typeof products[0] | null) => void;
+  isProductOrderOpen: boolean;
+  setIsProductOrderOpen: (open: boolean) => void;
   formData: {
     name: string;
     phone: string;
@@ -80,6 +82,8 @@ interface ProductCatalogProps {
 export default function ProductCatalog({
   selectedProduct,
   setSelectedProduct,
+  isProductOrderOpen,
+  setIsProductOrderOpen,
   formData,
   setFormData,
   handleSubmit
@@ -128,10 +132,16 @@ export default function ProductCatalog({
                 <CardContent>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-white">{product.price}</span>
-                    <Dialog>
+                    <Dialog open={isProductOrderOpen && selectedProduct?.id === product.id} onOpenChange={(open) => {
+                      setIsProductOrderOpen(open);
+                      if (!open) setSelectedProduct(null);
+                    }}>
                       <DialogTrigger asChild>
                         <Button 
-                          onClick={() => setSelectedProduct(product)}
+                          onClick={() => {
+                            setSelectedProduct(product);
+                            setIsProductOrderOpen(true);
+                          }}
                           className="bg-white hover:bg-white/90 text-gray-900"
                         >
                           Заказать

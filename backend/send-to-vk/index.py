@@ -38,6 +38,9 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     vk_token = os.environ.get('VK_BOT_TOKEN')
     vk_chat_id = os.environ.get('VK_CHAT_ID')
     
+    print(f"VK_BOT_TOKEN present: {bool(vk_token)}")
+    print(f"VK_CHAT_ID present: {bool(vk_chat_id)}")
+    
     if not vk_token or not vk_chat_id:
         return {
             'statusCode': 500,
@@ -45,7 +48,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            'body': json.dumps({'error': 'VK credentials not configured'})
+            'body': json.dumps({'error': 'VK credentials not configured', 'success': False})
         }
     
     body_data = json.loads(event.get('body', '{}'))
@@ -78,8 +81,10 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     try:
         with urllib.request.urlopen(req) as response:
             result = json.loads(response.read().decode('utf-8'))
+            print(f"VK API Response: {result}")
             
             if 'error' in result:
+                print(f"VK API Error: {result['error']}")
                 return {
                     'statusCode': 500,
                     'headers': {
@@ -87,6 +92,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
                         'Access-Control-Allow-Origin': '*'
                     },
                     'body': json.dumps({
+                        'success': False,
                         'error': 'VK API error',
                         'details': result['error']
                     })
@@ -101,11 +107,12 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
                 'body': json.dumps({'success': True, 'message_id': result.get('response')})
             }
     except Exception as e:
+        print(f"Exception sending to VK: {str(e)}")
         return {
             'statusCode': 500,
             'headers': {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             },
-            'body': json.dumps({'error': str(e)})
+            'body': json.dumps({'success': False, 'error': str(e)})
         }
