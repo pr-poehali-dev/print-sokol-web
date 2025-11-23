@@ -76,13 +76,46 @@ export default function Index() {
     comment: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в ближайшее время",
-    });
-    setFormData({ name: '', phone: '', email: '', comment: '' });
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/e9be1b07-1285-4ca7-a874-827f859f64cd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          comment: formData.comment,
+          product: selectedProduct?.name || 'Не указан'
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Мы свяжемся с вами в ближайшее время",
+        });
+        setFormData({ name: '', phone: '', email: '', comment: '' });
+      } else {
+        toast({
+          title: "Ошибка отправки",
+          description: "Попробуйте позвонить нам по телефону",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка отправки",
+        description: "Попробуйте позвонить нам по телефону",
+        variant: "destructive"
+      });
+    }
   };
 
   return (
